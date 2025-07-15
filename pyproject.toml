@@ -1,0 +1,12 @@
+[project]
+name = "schedule-api"
+version = "0.1.0"
+description = "Schedule API project"
+requires-python = ">=3.13"
+dependencies = [
+    "alembic>=1.16.4",
+    "asyncpg>=0.30.0",
+    "fastapi>=0.116.1",
+    "sqlalchemy>=2.0.41",
+    "uvicorn>=0.35.0",
+]
