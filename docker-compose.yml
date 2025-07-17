@@ -5,7 +5,7 @@ services:
       - .env
     container_name: schedule_api_service
     restart: unless-stopped
-    command: uvicorn src.main:app --workers 4 --host 0.0.0.0
+    command: uvicorn src.schedule_api.application.application:app --workers 4 --host 0.0.0.0
     ports:
       - "8000:8000"
     depends_on:
