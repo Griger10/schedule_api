@@ -5,17 +5,17 @@ repos:
     hooks:
       - id: isort
         exclude: __init__.py
-        args: [--profile=black, --filter-files]
+        args: [ --profile=black, --filter-files ]
   - repo: https://github.com/asottile/pyupgrade
     rev: v3.20.0
     hooks:
       - id: pyupgrade
-        args: [--py312-plus]
+        args: [ --py312-plus ]
   - repo: https://github.com/hhatto/autopep8
     rev: v2.3.2
     hooks:
       - id: autopep8
-        args: [--max-line-length=88, --in-place, --ignore=E203]
+        args: [ --max-line-length=88, --in-place, --ignore=E203 ]
   - repo: https://github.com/psf/black
     rev: 25.1.0
     hooks:
@@ -25,16 +25,16 @@ repos:
     rev: v0.12.3
     hooks:
       - id: ruff
-        args: [--fix, --line-length=88, --ignore=E203]
+        args: [ --fix, --line-length=88, --ignore=E203 ]
       - id: ruff-format
-        args: [--line-length=88]
+        args: [ --line-length=88 ]
   - repo: https://github.com/jackdewinter/pymarkdown
     rev: v0.9.31
     hooks:
       - id: pymarkdown
-        args: [--config, .markdownlint.yaml, fix, .]
+        args: [ --config, .markdownlint.yaml, fix, . ]
   - repo: https://github.com/adrienverge/yamllint.git
     rev: v1.29.0
     hooks:
       - id: yamllint
-        args: [--config-file=.yamllint.yaml]
+        args: [ --config-file=.yamllint.yaml ]
