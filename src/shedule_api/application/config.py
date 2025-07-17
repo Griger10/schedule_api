@@ -1,4 +1,4 @@
-from pydantic import computed_field, SecretStr
+from pydantic import SecretStr, computed_field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 

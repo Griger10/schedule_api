@@ -1,8 +1,6 @@
 services:
   api:
-    build:
-      dockerfile: Dockerfile
-      context: .
+    build: .
     env_file:
       - .env
     container_name: schedule_api_service
