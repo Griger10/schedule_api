@@ -13,5 +13,6 @@ dependencies = [
     "pymarkdownlnt>=0.9.31",
     "sqlalchemy>=2.0.41",
     "uvicorn>=0.35.0",
+    "yamlfix>=1.17.0",
     "yamllint>=1.37.1",
 ]

@@ -1,4 +1,11 @@
+---
 extends: default
+ignore: |
+  .git/
+  .venv/
+  node_modules/
+  *.tmp.yaml
+  docker-compose.*
 rules:
   line-length: disable
   brackets:
@@ -6,9 +13,4 @@ rules:
     max-spaces-inside: 2
   truthy:
     level: warning
-    allowed-values: [ 'on', 'true', 'false', 'yes', 'no' ]
-
-ignore: |
-  .venv/
-  venv/
-  .git/
+    allowed-values: [on, 'true', 'false', yes, no]
