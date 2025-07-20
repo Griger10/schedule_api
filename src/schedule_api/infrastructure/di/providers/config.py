@@ -1,6 +1,6 @@
 from dishka import Provider, Scope, provide
 
-from sсhedule_api.application.config import Config
+from schedule_api.application.config import Config
 
 
 class ConfigProvider(Provider):

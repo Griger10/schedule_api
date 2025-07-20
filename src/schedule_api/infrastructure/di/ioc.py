@@ -1,7 +1,7 @@
 from dishka import AsyncContainer, make_async_container
 
-from sсhedule_api.application.config import Config
-from sсhedule_api.infrastructure.di.providers import get_providers
+from schedule_api.application.config import Config
+from schedule_api.infrastructure.di.providers import get_providers
 
 
 def create_container() -> AsyncContainer:

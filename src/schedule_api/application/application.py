@@ -2,7 +2,7 @@ from dishka.integrations.fastapi import setup_dishka
 from fastapi import FastAPI
 from fastapi.responses import ORJSONResponse
 
-from sсhedule_api.infrastructure.di.ioc import create_container
+from schedule_api.infrastructure.di.ioc import create_container
 
 
 def create_app() -> FastAPI:
