@@ -5,10 +5,10 @@ from sqlalchemy.ext.asyncio import (
     create_async_engine,
     async_sessionmaker,
     AsyncSession,
-    AsyncEngine
+    AsyncEngine,
 )
 
-from sсhedule_api.application.config import Config
+from schedule_api.application.config import Config
 
 
 class DatabaseProvider(Provider):
@@ -21,10 +21,14 @@ class DatabaseProvider(Provider):
         await engine.dispose(True)
 
     @provide
-    async def get_session_maker(self, engine: AsyncEngine) -> async_sessionmaker[AsyncSession]:
+    async def get_session_maker(
+        self, engine: AsyncEngine
+    ) -> async_sessionmaker[AsyncSession]:
         return async_sessionmaker(engine, expire_on_commit=False)
 
     @provide(scope=Scope.REQUEST)
-    async def get_session(self, pool: async_sessionmaker[AsyncSession]) -> AsyncIterable[AsyncSession]:
+    async def get_session(
+        self, pool: async_sessionmaker[AsyncSession]
+    ) -> AsyncIterable[AsyncSession]:
         async with pool() as session:
             yield session
